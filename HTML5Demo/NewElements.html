@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function LoadProgress() {
+            var d = new Date();
+            var sec = d.getSeconds() * 100 / 60;
+
+            document.getElementById("p1").value = sec;
+            t = setTimeout(function () { LoadProgress() }, 500);
+        }
+    </script>
+</head>
+<body onload="LoadProgress()">
+    <header>Page Header</header>
+    <nav><a href="#">Nav1 </a> | <a href="#">Nav2</a></nav>
+    <article>Content of the page</article>
+    <mark>some test</mark><br />
+    <details><summary>less data</summary><p>some data</p></details>
+    <aside>some aside text</aside>
+    <progress id="p1" value="22" max="100"></progress>
+    <footer>Page footer</footer>
+</body>
+</html>
